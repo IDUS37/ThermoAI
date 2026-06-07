@@ -1,0 +1,23 @@
+plugins {
+    id 'com.android.application'
+    id 'com.chaquo.python'
+}
+
+android {
+    namespace "com.example.thermoai"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.thermoai"
+        minSdk 24
+        targetSdk 34
+
+        python {
+            pip {
+                install "pytesseract"
+                install "Pillow"
+                install "numpy"
+            }
+        }
+    }
+}
